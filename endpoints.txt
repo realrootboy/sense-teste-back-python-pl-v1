@@ -1,0 +1,9 @@
+Get all:
+curl localhost:6000/api/localidades
+
+Get by uf:
+curl localhost:6000/api/localidades/ES
+
+To create a new location:
+curl -X POST localhost:6000/api/localidades -H 'Content-Type: application/json' -d '{"cep":"29120-530"}'
+ 
