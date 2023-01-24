@@ -1,0 +1,16 @@
+version: '2.4'
+services:
+  api:
+    container_name: 'sense-test-api'
+    image: 'sense-test-api'
+    build: .
+    command: bash -c "python3 app.py"
+    ports:
+      - '6000:6000'
+    volumes:
+      - ./:/src
+    tty: true
+    stdin_open: true
+    privileged: true
+    environment:
+      - API_PORT=6000
